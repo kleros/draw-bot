@@ -105,13 +105,13 @@ if __name__ == "__main__":
                                 requests.post('https://kleros.in/%s/session' % user, data = {"session": session})
 
                 if number_of_jurors_drawn > 0:
+                    print("processed session %d" % session)
                     lastSessionUpdated = session
                 else:
                     print("unable to fetch draws for any jurors -- sleeping")
                     time.sleep(3600) # infura problems? sleep for an hour
                     continue
 
-            print("processed session %d")
             time.sleep(300) # sleep for 5 minutes between iterations
         except:
             print("error -- sleeping")
