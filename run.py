@@ -87,7 +87,6 @@ if __name__ == "__main__":
                         check_disputes = False
                     dispute_id += 1
 
-                print("number of open disputes %d" % len(open_disputes))
                 for user in activated_users:
                     for dispute in open_disputes:
                         disputeID = dispute[0]
